@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">InmobiliariaApp</string>
+    <string name="navigation_drawer_open">Abrir menú</string>
+    <string name="navigation_drawer_close">Cerrar menú</string>
+    <string name="prompt_tipo">Seleccione tipo</string>
+    <string name="prompt_uso">Seleccione uso</string>
+
+</resources>

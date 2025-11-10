@@ -1,0 +1,13 @@
+<resources>
+    <string-array name="tipos_inmueble">
+        <item>Casa</item>
+        <item>Departamento</item>
+        <item>Local</item>
+        <item>Oficina</item>
+    </string-array>
+
+    <string-array name="usos_inmueble">
+        <item>Residencial</item>
+        <item>Comercial</item>
+    </string-array>
+</resources>

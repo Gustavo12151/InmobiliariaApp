@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Información del contrato"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#5A2DAF"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Código contrato -->
+        <TextView android:text="Código contrato:" />
+        <TextView
+            android:id="@+id/tvCodigoContrato"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Fechas -->
+        <TextView android:text="Fecha inicio:" />
+        <TextView
+            android:id="@+id/tvFechaInicio"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView android:text="Fecha finalización:" />
+        <TextView
+            android:id="@+id/tvFechaFin"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Monto -->
+        <TextView android:text="Monto de alquiler:" />
+        <TextView
+            android:id="@+id/tvMonto"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Inquilino -->
+        <TextView android:text="Inquilino:" />
+        <TextView
+            android:id="@+id/tvInquilino"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Inmueble -->
+        <TextView android:text="Inmueble:" />
+        <TextView
+            android:id="@+id/tvInmueble"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Botón PAGOS -->
+        <Button
+            android:id="@+id/btnPagos"
+            android:text="PAGOS"
+            android:textStyle="bold"
+            android:backgroundTint="#B39DDB"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>
