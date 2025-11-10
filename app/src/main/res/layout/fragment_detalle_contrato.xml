@@ -19,45 +19,81 @@
             android:layout_height="wrap_content" />
 
         <!-- Código contrato -->
-        <TextView android:text="Código contrato:" />
+        <TextView
+            android:text="Código contrato:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
         <TextView
             android:id="@+id/tvCodigoContrato"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <!-- Fechas -->
-        <TextView android:text="Fecha inicio:" />
+        <TextView
+            android:text="Fecha inicio:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
         <TextView
             android:id="@+id/tvFechaInicio"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-        <TextView android:text="Fecha finalización:" />
+        <TextView
+            android:text="Fecha finalización:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
         <TextView
             android:id="@+id/tvFechaFin"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <!-- Monto -->
-        <TextView android:text="Monto de alquiler:" />
+        <TextView
+            android:text="Monto de alquiler:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
         <TextView
             android:id="@+id/tvMonto"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <!-- Inquilino -->
-        <TextView android:text="Inquilino:" />
+        <TextView
+            android:text="Inquilino:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
         <TextView
             android:id="@+id/tvInquilino"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <!-- Inmueble -->
-        <TextView android:text="Inmueble:" />
+        <TextView
+            android:text="Inmueble:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
         <TextView
             android:id="@+id/tvInmueble"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <!-- Botón PAGOS -->
         <Button

@@ -9,43 +9,85 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!-- Título -->
         <TextView
-            android:text="Datos del Inquilino"
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detalle del Inquilino"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="#5A2DAF"
-            android:layout_marginBottom="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_marginBottom="16dp" />
 
         <!-- Nombre -->
-        <TextView android:text="Nombre:" />
         <TextView
-            android:id="@+id/tvNombre"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre:"
+            android:layout_marginTop="4dp" />
 
-        <!-- DNI -->
-        <TextView android:text="DNI:" />
         <TextView
-            android:id="@+id/tvDni"
+            android:id="@+id/tvNombreInquilino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="8dp" />
 
-        <!-- Teléfono -->
-        <TextView android:text="Teléfono:" />
+        <!-- DNI (opcional) -->
         <TextView
-            android:id="@+id/tvTelefono"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DNI:" />
+
+        <TextView
+            android:id="@+id/tvDniInquilino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
 
         <!-- Email -->
-        <TextView android:text="Email:" />
         <TextView
-            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email:" />
+
+        <TextView
+            android:id="@+id/tvEmailInquilino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Teléfono -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teléfono:" />
+
+        <TextView
+            android:id="@+id/tvTelefonoInquilino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Inmueble asociado -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inmueble:" />
+
+        <TextView
+            android:id="@+id/tvInmuebleDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="16dp" />
 
+        <!-- Botón Ver Contrato / Pagos (si aplica) -->
+        <Button
+            android:id="@+id/btnVerContrato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VER CONTRATO" />
     </LinearLayout>
-
 </ScrollView>

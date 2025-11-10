@@ -37,10 +37,10 @@ public class DetalleInquilinoFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_detalle_inquilino, container, false);
 
-        tvNombre = view.findViewById(R.id.tvNombre);
-        tvDni = view.findViewById(R.id.tvDni);
-        tvTelefono = view.findViewById(R.id.tvTelefono);
-        tvEmail = view.findViewById(R.id.tvEmail);
+        tvNombre = view.findViewById(R.id.tvNombreInquilino);
+        tvDni = view.findViewById(R.id.tvDniInquilino);
+        tvTelefono = view.findViewById(R.id.tvTelefonoInquilino);
+        tvEmail = view.findViewById(R.id.tvEmailInquilino);
 
         apiService = ApiClient.getApiService();
         sessionManager = new SessionManager(requireContext());

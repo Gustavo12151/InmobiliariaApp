@@ -17,6 +17,10 @@ public class Inmueble implements Serializable {
     private String imagenUrl;
     private boolean disponible;
 
+    // ✅ Agregar el contrato asociado (viene en la API)
+    private Contrato contrato;
+
+
     public int getIdInmueble() {
         return idInmueble;
     }
@@ -63,5 +67,14 @@ public class Inmueble implements Serializable {
 
     public boolean isDisponible() {
         return disponible;
+    }
+
+    // ✅ GETTERS Y SETTERS para contrato
+    public Contrato getContrato() {
+        return contrato;
+    }
+
+    public void setContrato(Contrato contrato) {
+        this.contrato = contrato;
     }
 }

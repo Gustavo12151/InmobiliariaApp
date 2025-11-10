@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.inmobiliariaapp.R;
 import com.example.inmobiliariaapp.models.Inmueble;
+import com.example.inmobiliariaapp.models.Inquilino;
+import com.example.inmobiliariaapp.models.Contrato;
 
 import java.util.List;
 
@@ -38,12 +40,27 @@ public class InquilinoAdapter extends RecyclerView.Adapter<InquilinoAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Inmueble i = lista.get(position);
+        Inmueble inmueble = lista.get(position);
 
-        holder.tvDireccion.setText(i.getDireccion());
-        holder.tvPrecio.setText("$ " + i.getPrecio());
+        // ✅ Obtener contrato vigente
+        Contrato contrato = inmueble.getContrato();
 
-        holder.card.setOnClickListener(v -> listener.onClick(i));
+        // ✅ Evitar crash si no hay contrato
+        if (contrato != null) {
+            Inquilino inq = contrato.getInquilino();
+            if (inq != null) {
+                holder.tvNombre.setText(inq.getNombre() + " " + inq.getApellido());
+            } else {
+                holder.tvNombre.setText("Sin inquilino asignado");
+            }
+        } else {
+            holder.tvNombre.setText("Sin contrato");
+        }
+
+        holder.tvDireccion.setText(inmueble.getDireccion());
+        holder.tvPrecio.setText("$ " + inmueble.getPrecio());
+
+        holder.card.setOnClickListener(v -> listener.onClick(inmueble));
     }
 
     @Override
@@ -54,12 +71,13 @@ public class InquilinoAdapter extends RecyclerView.Adapter<InquilinoAdapter.View
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         CardView card;
-        TextView tvDireccion, tvPrecio;
+        TextView tvNombre, tvDireccion, tvPrecio;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             card = itemView.findViewById(R.id.cardInquilino);
+            tvNombre = itemView.findViewById(R.id.tvNombreInquilino);
             tvDireccion = itemView.findViewById(R.id.tvDireccion);
             tvPrecio = itemView.findViewById(R.id.tvPrecio);
         }

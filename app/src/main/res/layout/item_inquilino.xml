@@ -1,27 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardInquilino"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    android:elevation="4dp"
-    android:padding="12dp">
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="6dp">
 
     <LinearLayout
         android:orientation="vertical"
+        android:padding="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!-- ✅ Nombre del inquilino -->
+        <TextView
+            android:id="@+id/tvNombreInquilino"
+            android:text="Nombre del Inquilino"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- ✅ Dirección del inmueble -->
         <TextView
             android:id="@+id/tvDireccion"
             android:text="Dirección"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
+        <!-- ✅ Precio del alquiler -->
         <TextView
             android:id="@+id/tvPrecio"
-            android:text="$0"
-            android:textSize="16sp" />
+            android:text="$ 0"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
