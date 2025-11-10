@@ -33,7 +33,7 @@ public class PagoAdapter extends RecyclerView.Adapter<PagoAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Pago p = lista.get(position);
 
-        holder.tvCodigo.setText("Código pago: " + p.getId());
+        holder.tvCodigo.setText("Pago N°: " + p.getNumeroPago());
         holder.tvNumeroPago.setText("Número pago: " + p.getNumeroPago());
         holder.tvImporte.setText("Importe: $" + p.getImporte());
         holder.tvFecha.setText("Fecha: " + p.getFechaPago());

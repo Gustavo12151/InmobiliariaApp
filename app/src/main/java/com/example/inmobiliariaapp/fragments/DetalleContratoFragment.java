@@ -54,7 +54,7 @@ public class DetalleContratoFragment extends Fragment {
 
         if (getArguments() != null) {
             inmueble = (Inmueble) getArguments().getSerializable("inmueble");
-            cargarContrato(inmueble.getId());
+            cargarContrato(inmueble.getIdInmueble());
         }
 
         return view;
@@ -81,7 +81,7 @@ public class DetalleContratoFragment extends Fragment {
     }
 
     private void mostrarDatos(Contrato c) {
-        tvCodigo.setText(String.valueOf(c.getId()));
+        tvCodigo.setText(String.valueOf(c.getIdContrato()));
         tvFechaInicio.setText(c.getFechaInicio());
         tvFechaFin.setText(c.getFechaFin());
         tvMonto.setText("$" + c.getMonto());
@@ -94,7 +94,7 @@ public class DetalleContratoFragment extends Fragment {
         tvInmueble.setText("Inmueble en " + inmueble.getDireccion());
 
         // 🔹 Botón PAGOS → abrir fragment de pagos
-        btnPagos.setOnClickListener(v -> abrirPagos(c.getId()));
+        btnPagos.setOnClickListener(v -> abrirPagos(c.getIdContrato()));
     }
 
     private void abrirPagos(int idContrato) {
