@@ -1,9 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.InmobiliariaApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <!-- TEMA PRINCIPAL DE LA APP -->
+    <style name="Theme.Inmobiliaria" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Colores globales -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Fondo global -->
+        <item name="android:windowBackground">@color/backgroundMain</item>
+
+        <!-- Tipografía del sistema -->
+        <item name="android:fontFamily">sans-serif</item>
+
+        <!-- Estilos globales -->
+        <item name="buttonStyle">@style/Widget.Button.Primary</item>
+        <item name="textInputStyle">@style/Widget.Input.Primary</item>
+        <item name="cardViewStyle">@style/Widget.Card.Primary</item>
+
     </style>
 
-    <style name="Theme.InmobiliariaApp" parent="Base.Theme.InmobiliariaApp" />
 </resources>
