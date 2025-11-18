@@ -27,7 +27,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
 public class InmueblesFragment extends Fragment {
 
     private RecyclerView rv;
@@ -51,15 +50,13 @@ public class InmueblesFragment extends Fragment {
         apiService = ApiClient.getApiService();
         sessionManager = new SessionManager(requireContext());
 
-        // ✅ Grid de 2 columnas como en tu diseño
+        // Mostrar inmuebles en grid de 2 columnas
         rv.setLayoutManager(new GridLayoutManager(requireContext(), 2));
 
         cargarInmuebles();
 
-        // ✅ Listener botón +
-        btnAgregar.setOnClickListener(v ->
-                Toast.makeText(getContext(), "Función agregar inmueble pendiente", Toast.LENGTH_SHORT).show()
-        );
+        // NAV → Abrir pantalla para agregar inmueble
+        btnAgregar.setOnClickListener(v -> abrirAgregarInmueble());
 
         return view;
     }
@@ -72,7 +69,6 @@ public class InmueblesFragment extends Fragment {
             public void onResponse(Call<List<Inmueble>> call, Response<List<Inmueble>> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     lista = response.body();
-
                     adapter = new InmuebleAdapter(lista, inmueble -> abrirDetalle(inmueble));
                     rv.setAdapter(adapter);
                 } else {
@@ -97,6 +93,14 @@ public class InmueblesFragment extends Fragment {
         requireActivity().getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragment_container, fragment)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    private void abrirAgregarInmueble() {
+        requireActivity().getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, new AgregarInmuebleFragment())
                 .addToBackStack(null)
                 .commit();
     }

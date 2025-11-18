@@ -73,19 +73,21 @@ public interface ApiService {
     @GET("api/Inmuebles/GetContratoVigente")
     Call<List<Inmueble>> getInmueblesConContrato(@Header("Authorization") String token);
 
-    @Multipart
-    @POST("api/Inmuebles/cargar")
-    Call<Inmueble> agregarInmueble(
-            @Header("Authorization") String token,
-            @Part MultipartBody.Part imagen,
-            @Part("inmueble") RequestBody inmuebleJson
-    );
 
     @PUT("api/Inmuebles/actualizar")
     Call<Inmueble> actualizarInmueble(
             @Header("Authorization") String token,
             @Body Inmueble inmueble
     );
+    @Multipart
+    @POST("api/Inmuebles/cargar")
+    Call<Inmueble> cargarInmueble(
+            @Header("Authorization") String token,
+            @Part MultipartBody.Part imagen,
+            @Part("inmueble") RequestBody inmuebleJson
+    );
+
+
 
     // ====================================================
     // 📄 CONTRATOS
@@ -104,4 +106,6 @@ public interface ApiService {
             @Header("Authorization") String token,
             @Path("id") int idContrato
     );
+
+
 }

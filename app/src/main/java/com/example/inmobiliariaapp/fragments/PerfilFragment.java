@@ -1,6 +1,5 @@
 package com.example.inmobiliariaapp.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +13,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.inmobiliariaapp.R;
-import com.example.inmobiliariaapp.activities.CambiarClaveActivity;
 import com.example.inmobiliariaapp.models.Propietario;
 import com.example.inmobiliariaapp.network.ApiClient;
 import com.example.inmobiliariaapp.network.ApiService;
@@ -66,9 +64,13 @@ public class PerfilFragment extends Fragment {
         });
 
         btnCambiarClave.setOnClickListener(v -> {
-            Intent intent = new Intent(requireActivity(), CambiarClaveActivity.class);
-            startActivity(intent);
+            requireActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, new CambiarClaveFragment())
+                    .addToBackStack(null)
+                    .commit();
         });
+
 
         return view;
     }
